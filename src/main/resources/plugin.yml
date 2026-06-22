@@ -1,0 +1,6 @@
+name: SkyMMOCore
+version: '${version}'
+
+main: com.github.mry114.skyMMOCore.SkyMMOCore
+api-version: '1.21.8'
+load: POSTWORLD
