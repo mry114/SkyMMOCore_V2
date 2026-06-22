@@ -19,6 +19,10 @@ dependencies {
     // Avaje Inject
     implementation("io.avaje:avaje-inject:11.4")
 
+    annotationProcessor(
+        "io.avaje:avaje-inject-generator:11.4"
+    )
+
     // ClassGraph
     implementation("io.github.classgraph:classgraph:4.8.180")
 
