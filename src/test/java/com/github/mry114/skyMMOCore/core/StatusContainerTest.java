@@ -6,12 +6,14 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class StatusContainerTest {
     @Test
-    void shouldMergeItemStatusIntoPlayerStatus() {
-        MaxHealth status = new MaxHealth();
+    void StatusContainerAddGetTest() {
+        Status status = StatusRegistry.STATUS;
         StatusContainer container = new StatusContainer();
 
-        container.add(status, RegionKeys.BASE, CalculationType.ADDITION, 100d);
+        container.add(status, RegionKeys.BASE, CalculationType.ADDITION, 100.0);
 
-        assertEquals(100, container.get(status, RegionKeys.BASE, CalculationType.ADDITION));
+        assertEquals(100.0, container.get(status, RegionKeys.BASE, CalculationType.ADDITION));
     }
+
+
 }

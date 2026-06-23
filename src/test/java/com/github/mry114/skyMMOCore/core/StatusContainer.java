@@ -7,7 +7,15 @@ public class StatusContainer {
     private final Map<Status, Map<StatusRegionKey, Map<CalculationType, Double>>> container;
 
     public StatusContainer() {
-        this.container = new HashMap<>().put(new MaxHealth, new HashMap<>().put(RegionKeys.BASE, new HashMap<>().put(CalculationType.ADDITION, 0)));
+        Map<CalculationType, Double> type = new HashMap<>();
+        type.put(CalculationType.ADDITION, 0.0);
+
+        Map<StatusRegionKey, Map<CalculationType, Double>> key = new HashMap<>();
+        key.put(RegionKeys.BASE, type);
+
+        Map<Status, Map<StatusRegionKey, Map<CalculationType, Double>>> container = new HashMap<>();
+        container.put(StatusRegistry.STATUS, key);
+        this.container = container;
     }
 
     public void add(Status status, StatusRegionKey key, CalculationType type, double value) {
