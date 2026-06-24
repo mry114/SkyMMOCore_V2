@@ -1,9 +1,8 @@
 package com.github.mry114.skyMMOCore.test;
 
-import org.junit.jupiter.api.BeforeEach;
+import com.github.mry114.skyMMOCore.api.status.Status;
+import com.github.mry114.skyMMOCore.core.registry.Registry;
 import org.junit.jupiter.api.Test;
-
-import java.rmi.registry.Registry;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -12,7 +11,7 @@ public class RegistryTest {
 
     @Test
     public void registeredObjectCanBeRetrieved() {
-        Registry<Status> STATUS = new Registry<Status>(MAX_HEALTH);
+        Registry<Status> STATUS = new Registry<>();
 
         STATUS.register(MAX_HEALTH);
 
