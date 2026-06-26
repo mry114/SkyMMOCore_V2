@@ -1,38 +1,33 @@
 package com.github.mry114.skyMMOCore.test.registry;
 
-import com.github.mry114.skyMMOCore.dummy.api.TestStatus;
 import com.github.mry114.skyMMOCore.core.registry.Registry;
-import com.github.mry114.skyMMOCore.dummy.status.TestTestStatus2;
-import com.github.mry114.skyMMOCore.dummy.status.TestTestStatus1;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class RegistryTest {
-    private static final TestStatus TEST_TEST_STATUS_1 = new TestTestStatus1();
-    private static final TestStatus TEST_TEST_STATUS_2 = new TestTestStatus2();
+    private static final String data1 = "data1";
+    private static final String data2 = "data2";
 
     @Test
     public void registeredObjectCanBeRetrieved() {
-        Registry<Class<? extends TestStatus>, TestStatus> STATUS = new Registry<>();
+        Registry<Class<? extends String>, String> STATUS = new Registry<>();
 
-        STATUS.register(TEST_TEST_STATUS_1.getClass(), TEST_TEST_STATUS_1);
+        STATUS.register(data1.getClass(), data1);
 
-        TestStatus result = STATUS.get(TEST_TEST_STATUS_1.getClass());
+        String result = STATUS.get(data1.getClass());
 
-        assertEquals(TEST_TEST_STATUS_1, result);
+        assertEquals(data1, result);
     }
 
     @Test
     public void duplicateRegistrationThrowsException() {
-        Registry<Integer, TestStatus> STATUS = new Registry<>();
+        Registry<Integer, String> STATUS = new Registry<>();
 
-        STATUS.register(1 , TEST_TEST_STATUS_1);
+        STATUS.register(1 , data1);
 
-        IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> {
-            STATUS.register(1, TEST_TEST_STATUS_2);
-        });
+        IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> STATUS.register(1, data2));
 
         assertEquals("Registry登録にID重複が発生しています. キー: 1", exception.getMessage());
     }
