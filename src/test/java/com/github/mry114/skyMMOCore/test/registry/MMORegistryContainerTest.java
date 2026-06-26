@@ -19,4 +19,16 @@ public class MMORegistryContainerTest {
 
         assertEquals(registry, REGISTRY_CONTAINER.get(TEST));
     }
+
+    @Test
+    public void registryIntegrationTest() {
+        MMORegistryContainer REGISTRY_CONTAINER = new MMORegistryContainer();
+        Registry<Integer, String> registry = new Registry<>();
+        String data = "data";
+
+        registry.register(1, data);
+        REGISTRY_CONTAINER.set(TEST, registry);
+
+        assertEquals(REGISTRY_CONTAINER.get(TEST), registry);
+    }
 }
