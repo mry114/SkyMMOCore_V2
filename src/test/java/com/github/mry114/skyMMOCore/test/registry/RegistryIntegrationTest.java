@@ -4,7 +4,7 @@ import com.github.mry114.skyMMOCore.core.registry.MMORegistryContainer;
 import com.github.mry114.skyMMOCore.core.registry.RegistryType;
 import com.github.mry114.skyMMOCore.core.registry.Registry;
 import com.github.mry114.skyMMOCore.dummy.status.TestTestStatus1;
-import com.github.mry114.skyMMOCore.dummy.status.api.TestStatus;
+import com.github.mry114.skyMMOCore.dummy.api.TestStatus;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
