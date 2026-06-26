@@ -12,11 +12,11 @@ public class RegistryTest {
 
     @Test
     public void registeredObjectCanBeRetrieved() {
-        Registry<Class<? extends String>, String> STATUS = new Registry<>();
+        Registry<Integer, String> STATUS = new Registry<>();
 
-        STATUS.register(data1.getClass(), data1);
+        STATUS.register(1, data1);
 
-        String result = STATUS.get(data1.getClass());
+        String result = STATUS.get(1);
 
         assertEquals(data1, result);
     }
