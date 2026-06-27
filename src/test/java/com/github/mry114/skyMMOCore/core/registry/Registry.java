@@ -8,7 +8,7 @@ public class Registry<K, V> {
 
     public void register(K key, V data) {
         if (map.containsKey(key)) {
-            throw new IllegalArgumentException("Registry登録にID重複が発生しています. キー: " + key);
+            throw new IllegalArgumentException("Duplicate ID found during registry registration. Key: " + key);
         }
         map.put(key, data);
     }
