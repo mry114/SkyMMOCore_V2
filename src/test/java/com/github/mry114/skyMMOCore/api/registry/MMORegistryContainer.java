@@ -1,4 +1,4 @@
-package com.github.mry114.skyMMOCore.core.registry;
+package com.github.mry114.skyMMOCore.api.registry;
 
 import org.jetbrains.annotations.NotNull;
 

@@ -1,8 +1,8 @@
-package com.github.mry114.skyMMOCore.test.registry;
+package com.github.mry114.skyMMOCore.test.api.registry;
 
-import com.github.mry114.skyMMOCore.core.registry.MMORegistryContainer;
-import com.github.mry114.skyMMOCore.core.registry.RegistryType;
-import com.github.mry114.skyMMOCore.core.registry.Registry;
+import com.github.mry114.skyMMOCore.api.registry.MMORegistryContainer;
+import com.github.mry114.skyMMOCore.api.registry.RegistryType;
+import com.github.mry114.skyMMOCore.api.registry.Registry;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

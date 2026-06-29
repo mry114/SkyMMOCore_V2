@@ -1,5 +1,6 @@
-package com.github.mry114.skyMMOCore.core.status;
+package com.github.mry114.skyMMOCore.api.status.container;
 
+import com.github.mry114.skyMMOCore.api.status.type.StatusModifierType;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.HashMap;

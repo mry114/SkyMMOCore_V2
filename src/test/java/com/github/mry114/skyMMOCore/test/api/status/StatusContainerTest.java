@@ -1,6 +1,9 @@
-package com.github.mry114.skyMMOCore.test.status;
+package com.github.mry114.skyMMOCore.test.api.status;
 
-import com.github.mry114.skyMMOCore.core.status.*;
+import com.github.mry114.skyMMOCore.api.status.type.CalculateType;
+import com.github.mry114.skyMMOCore.api.status.container.StatusContainer;
+import com.github.mry114.skyMMOCore.api.status.type.StatusModifierType;
+import com.github.mry114.skyMMOCore.api.status.type.StatusStepType;
 import com.github.mry114.skyMMOCore.dummy.status.DummyStatus;
 import org.junit.jupiter.api.Test;
 

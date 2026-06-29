@@ -1,4 +1,4 @@
-package com.github.mry114.skyMMOCore.core.status;
+package com.github.mry114.skyMMOCore.api.status.type;
 
 import com.github.mry114.skyMMOCore.api.status.Status;
 import org.jetbrains.annotations.NotNull;
