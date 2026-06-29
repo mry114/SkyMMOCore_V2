@@ -1,5 +1,7 @@
 package com.github.mry114.skyMMOCore.core.status;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -8,11 +10,11 @@ public class StatusContainer {
 
     public StatusContainer() {}
 
-    public void add(StatusModifierType type, double value) {
+    public void add(@NotNull StatusModifierType type, double value) {
         modifier.merge(type, value, Double::sum);
     }
 
-    public double get(StatusModifierType type) {
+    public double get(@NotNull StatusModifierType type) {
         if (!modifier.containsKey(type)) {
             throw new IllegalArgumentException("Key is not registered: " + type);
         }

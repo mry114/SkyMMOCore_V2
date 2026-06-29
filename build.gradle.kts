@@ -14,6 +14,8 @@ repositories {
 }
 
 dependencies {
+    testCompileOnly("org.jetbrains:annotations:26.1.0")
+
     compileOnly("io.papermc.paper:paper-api:1.21.8-R0.1-SNAPSHOT")
 
     // Avaje Inject

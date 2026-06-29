@@ -1,4 +1,6 @@
 package com.github.mry114.skyMMOCore.core.status;
 
-public record StatusStepType(String stringKey) {
+import org.jetbrains.annotations.NotNull;
+
+public record StatusStepType(@NotNull String stringKey) {
 }
