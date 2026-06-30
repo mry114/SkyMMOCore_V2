@@ -12,23 +12,23 @@ public class RegistryTest {
 
     @Test
     public void registeredObjectCanBeRetrieved() {
-        Registry<Integer, String> STATUS = new Registry<>();
+        Registry<Integer, String> DATA = new Registry<>();
 
-        STATUS.register(1, data1);
+        DATA.register(1, data1);
 
-        String result = STATUS.get(1);
+        String result = DATA.get(1);
 
         assertEquals(data1, result);
     }
 
     @Test
     public void duplicateRegistrationThrowsException() {
-        Registry<Integer, String> STATUS = new Registry<>();
+        Registry<Integer, String> DATA = new Registry<>();
 
-        STATUS.register(1 , data1);
+        DATA.register(1 , data1);
 
-        IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> STATUS.register(1, data2));
+        IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> DATA.register(1, data2));
 
-        assertEquals("Registry登録にID重複が発生しています. キー: 1", exception.getMessage());
+        assertEquals("Duplicate ID found during registry registration. Key: 1", exception.getMessage());
     }
 }

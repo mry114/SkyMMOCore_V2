@@ -1,10 +1,12 @@
 package com.github.mry114.skyMMOCore.api.registry;
 
+import jakarta.inject.Singleton;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.HashMap;
 import java.util.Map;
 
+@Singleton
 public class MMORegistryContainer {
     private final Map<RegistryType<?>, Registry<?, ?>> registry = new HashMap<>();
 

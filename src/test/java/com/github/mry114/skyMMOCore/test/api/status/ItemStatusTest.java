@@ -2,13 +2,11 @@ package com.github.mry114.skyMMOCore.test.api.status;
 
 import com.github.mry114.skyMMOCore.api.status.ItemStatus;
 import com.github.mry114.skyMMOCore.api.status.container.ItemStatusContainer;
+import com.github.mry114.skyMMOCore.dummy.registry.StatusRegistry;
 import com.github.mry114.skyMMOCore.dummy.type.ADummyItemStatusType;
 import com.github.mry114.skyMMOCore.dummy.type.BDummyItemStatusType;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
