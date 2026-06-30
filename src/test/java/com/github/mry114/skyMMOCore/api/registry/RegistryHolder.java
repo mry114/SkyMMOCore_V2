@@ -3,11 +3,11 @@ package com.github.mry114.skyMMOCore.api.registry;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RegistryBuilder<T> {
+public class RegistryHolder<T> {
     private final String pluginName;
     private final List<T> registryData = new ArrayList<>();
 
-    public RegistryBuilder(String pluginName) {
+    public RegistryHolder(String pluginName) {
         this.pluginName = pluginName;
     }
 
