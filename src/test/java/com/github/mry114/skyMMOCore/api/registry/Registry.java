@@ -6,7 +6,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Registry<K, V> {
+    private final RegistryType<V> registryType;
     private final Map<K, V> map = new HashMap<>();
+
+    public Registry(RegistryType<V> registryType) {
+        this.registryType = registryType;
+    }
 
     public void register(@NotNull K key, @NotNull V data) {
         if (map.containsKey(key)) {
@@ -17,5 +22,9 @@ public class Registry<K, V> {
 
     public V get(@NotNull K key) {
         return map.get(key);
+    }
+
+    public RegistryType<V> getRegistryType() {
+        return registryType;
     }
 }
