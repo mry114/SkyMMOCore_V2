@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class MMORegistryContainerTest {
-    private static final RegistryType<String> TEST = new RegistryType<>("test");
+    private static final RegistryType TEST = new RegistryType("test");
     private static final Registry<Integer, String> registry = new Registry<>(TEST);
 
     @Test

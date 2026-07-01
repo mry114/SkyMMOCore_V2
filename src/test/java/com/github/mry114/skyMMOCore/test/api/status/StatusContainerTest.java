@@ -25,7 +25,7 @@ public class StatusContainerTest {
     @Test
     public void get_ShouldThrowException_WhenKeyIsNotRegistered() {
         StatusContainer container = new StatusContainer();
-        StatusStepType BASE = new StatusStepType("base");
+        StatusStepType BASE = new StatusStepType("base1");
         StatusModifierType DUMMY_STATUS = new StatusModifierType(new DummyStatusA(), BASE, CalculateType.ADDITION);
 
         assertThrows(IllegalArgumentException.class, () -> container.get(DUMMY_STATUS));
