@@ -1,6 +1,7 @@
 package com.github.mry114.skyMMOCore.test.api.registry;
 
 import com.github.mry114.skyMMOCore.api.registry.Registry;
+import com.github.mry114.skyMMOCore.api.registry.RegistryType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -12,7 +13,7 @@ public class RegistryTest {
 
     @Test
     public void registeredObjectCanBeRetrieved() {
-        Registry<Integer, String> DATA = new Registry<>();
+        Registry<Integer, String> DATA = new Registry<>(new RegistryType("string"));
 
         DATA.register(1, data1);
 
@@ -23,7 +24,7 @@ public class RegistryTest {
 
     @Test
     public void duplicateRegistrationThrowsException() {
-        Registry<Integer, String> DATA = new Registry<>();
+        Registry<Integer, String> DATA = new Registry<>(new RegistryType("string"));
 
         DATA.register(1 , data1);
 

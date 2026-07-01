@@ -10,8 +10,8 @@ import jakarta.inject.Singleton;
 
 @Singleton
 public class StatusRegistry {
-    public static final RegistryType<Status> STATUS = new RegistryType<>("status");
-    public static final Registry<Class<? extends Status>, Status> REGISTRY = new Registry<>();
+    public static final RegistryType STATUS = new RegistryType("status");
+    public static final Registry<Class<? extends Status>, Status> REGISTRY = new Registry<>(STATUS);
 
     @Inject
     public StatusRegistry(MMORegistryContainer registryContainer) {
